@@ -1,14 +1,13 @@
 import React from 'react';
 import "../css/layout.css";
-import Layout from '../components/layout';
 
 const layout = ({ children }) => {
     return (
-        <Layout>
+        <div>
             <main>
                 {children}
             </main>
-        </Layout>
+        </div>
     )
 }
 
