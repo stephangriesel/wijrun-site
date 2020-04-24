@@ -1,10 +1,12 @@
 module.exports = {
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages/`,
+        name: `posts`,
+        path: `${__dirname}/src/posts/`,
       },
     },
     `gatsby-plugin-mdx`,
