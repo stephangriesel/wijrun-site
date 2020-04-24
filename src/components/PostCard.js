@@ -11,7 +11,7 @@ const PostCard = ({ post }) => {
     console.log("<< Image >>")
     console.log(img)
     return <article className={styles.card}>
-        <div className={styles.image}>
+        <div>
             <Image fluid={img} />
         </div>
         <div className={styles.info}>
@@ -19,7 +19,7 @@ const PostCard = ({ post }) => {
                 <h2>{title}</h2>
                 <h6>
                     <span>by {author}</span> /
-                    <span>{date}</span>
+                    <span> {date}</span>
                 </h6>
                 <p>{post.excerpt}</p>
                 <Link to={slug} class={styles.link}>Read more</Link>
