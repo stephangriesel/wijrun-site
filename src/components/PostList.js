@@ -6,10 +6,16 @@ const PostList = ({ posts }) => {
     console.log("<< PostList: POSTS >>")
     console.log(posts);
     return (
-        <div>
-            <h1>Postlist</h1>
-            <PostCard />
-        </div>
+        <section className={styles.posts}>
+            <h1>Pieter Piet</h1>
+            <h4>Some text</h4>
+            <div className={styles.center}>
+                {posts.map(({ node }, index) => {
+                    return <PostCard key={index} post={node} />
+                })}
+            </div>
+
+        </section>
     )
 }
 
