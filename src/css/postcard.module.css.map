@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,CAAC,CAAC;EACA,OAAO,EAAE,CAAC;CACX",
+    "sources": [
+        "postcard.module.scss"
+    ],
+    "names": [],
+    "file": "postcard.module.css"
+}
