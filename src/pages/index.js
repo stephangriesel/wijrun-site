@@ -20,7 +20,7 @@ const getPosts = graphql`
             image {
               childImageSharp {
                 fluid {
-                  ...GatsbyImageSharpFluid_withWebp
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -33,12 +33,12 @@ const getPosts = graphql`
 `
 
 export default () => {
-    const response = useStaticQuery(getPosts);
-    // console.log(response);
-    const posts = response.allMdx.edges
-    return (
-        <Layout>
-            <PostList posts={posts} />
-        </Layout>
-    )
+  const response = useStaticQuery(getPosts);
+  // console.log(response);
+  const posts = response.allMdx.edges
+  return (
+    <Layout>
+      <PostList posts={posts} />
+    </Layout>
+  )
 }
