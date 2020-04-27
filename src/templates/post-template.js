@@ -6,7 +6,9 @@ import Layout from '../components/layout';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 
-const PostTemplate = () => {
+const PostTemplate = ({ pageContext }) => {
+    console.log('<<< PAGE CONTEXT >>>')
+    console.log(pageContext);
     return (
         <div>
             post template
