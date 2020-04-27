@@ -1,3 +1,26 @@
-* {
-  margin: 0;
+.template {
+  width: 100%;
+  max-width: 70em;
+  margin: 15px auto;
+  .link {
+    border: 1px var(--mainBlack) solid;
+    color: var(--mainBlack);
+    padding: 0.5em;
+    margin: 0.5em;
+    text-decoration: none;
+    &:hover {
+      background: var(--mainBlack);
+      transition: ease-in 0.8s;
+      color: var(--mainWhite);
+    }
+  }
+  .info {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .img {
+    width: 100%;
+  }
 }
