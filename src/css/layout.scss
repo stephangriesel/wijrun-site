@@ -11,6 +11,11 @@ body {
   color: var(--mainBlack);
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+}
+
 :root {
   --mainGrey: #eeeeee;
   --mainWhite: #ffffff;
@@ -18,18 +23,21 @@ body {
   --darkGrey: #979797;
 }
 
-.test {
-  background: #763899;
-}
-
 .counter {
   color: #123444;
   margin: 2em 0;
 }
 
-.post-image span {
+.post-image {
   display: block;
   width: 20em;
   max-width: 100% !important;
+  margin: 2rem auto;
+}
+
+.post-video {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   margin: 2rem;
 }

@@ -42,6 +42,10 @@
   margin: 1em 0;
 }
 
+.template .content h3 {
+  margin: 0.5em 0;
+}
+
 .template .img {
   width: 100%;
 }

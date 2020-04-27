@@ -7,6 +7,9 @@ const layout = ({ children }) => {
             <main>
                 {children}
             </main>
+            <footer>
+                &copy; wijrun.com
+            </footer>
         </div>
     )
 }
