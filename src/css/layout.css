@@ -28,11 +28,6 @@ footer {
   --darkGrey: #979797;
 }
 
-.counter {
-  color: #123444;
-  margin: 2em 0;
-}
-
 .post-image {
   display: block;
   width: 20em;
@@ -47,7 +42,21 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
-  margin: 2rem;
+  width: 600px;
+  height: 500px;
+  margin: 2rem auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .post-video {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 20em;
+    height: 100%;
+  }
 }
 /*# sourceMappingURL=layout.css.map */

@@ -24,11 +24,6 @@ footer {
   --darkGrey: #979797;
 }
 
-.counter {
-  color: #123444;
-  margin: 2em 0;
-}
-
 .post-image {
   display: block;
   width: 20em;
@@ -39,6 +34,16 @@ footer {
 .post-video {
   display: flex;
   justify-content: center;
-  width: 100%;
-  margin: 2rem;
+  width: 600px;
+  height: 500px;
+  margin: 2rem auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .post-video {
+    display: flex;
+    justify-content: center;
+    width: 20em;
+    height: 100%;
+  }
 }
