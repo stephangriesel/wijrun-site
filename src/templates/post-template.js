@@ -4,9 +4,12 @@ import { Link, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 import Layout from '../components/layout';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+// import SEO from '../components/seo';
+// import { Helmet } from 'react-helmet'
 
 
 const PostTemplate = ({ data }) => {
+  // <SEO title={title} />
   // console.log('<<< PAGE CONTEXT >>>')
   // console.log(pageContext);
   const { title, date, author, image } = data.mdx.frontmatter;
