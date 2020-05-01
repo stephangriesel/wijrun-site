@@ -2,7 +2,6 @@ import React from 'react'
 import PostCard from './PostCard';
 import styles from '../css/postlist.module.css';
 import logo from '../img/logo.png';
-// import seo from '../components/seo';
 
 const PostList = ({ posts }) => {
     console.log("<< PostList: POSTS >>")

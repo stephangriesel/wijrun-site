@@ -40,7 +40,7 @@ export default () => {
   const posts = response.allMdx.edges
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title={"Home"} />
       <PostList posts={posts} />
     </Layout>
   )
