@@ -69,3 +69,7 @@ yarn-error.log
 .yarn-integrity
 
 /wijrun_oldsite
+
+# draft posts
+
+/src/posts/friesland/*
