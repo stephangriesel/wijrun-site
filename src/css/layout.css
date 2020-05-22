@@ -5,6 +5,10 @@
   margin: 0;
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   background: var(--mainGrey);
   font-family: "Montserrat", sans-serif;
