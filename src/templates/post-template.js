@@ -26,7 +26,7 @@ const PostTemplate = ({ data }) => {
           </h4>
         </div>
         <Image className={styles.img} fluid={img} />
-        <div class={styles.content}>
+        <div className={styles.content}>
           <MDXRenderer>{body}</MDXRenderer>
         </div>
       </section>
