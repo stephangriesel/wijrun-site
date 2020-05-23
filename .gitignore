@@ -72,6 +72,5 @@ yarn-error.log
 
 # draft posts
 
-/src/posts/friesland/*
 /src/posts/denhaag/*
 /src/posts/old/*
