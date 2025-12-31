@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,CAAC,CAAC;EACA,OAAO,EAAE,CAAC;CACX;;AAED,AAAA,OAAO,CAAC;EACN,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;CAMpB;;AATD,AAIE,OAJK,CAIL,GAAG,CAAC;EACF,MAAM,EAAE,GAAG;EACX,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,IAAI;CAChB",
+    "sources": [
+        "postlist.module.scss"
+    ],
+    "names": [],
+    "file": "postlist.module.css"
+}

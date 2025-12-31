@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: var(--mainGrey);
+  font-family: "Montserrat", sans-serif;
+  color: var(--mainBlack);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+:root {
+  --mainGrey: #eeeeee;
+  --mainWhite: #ffffff;
+  --mainBlack: #252525;
+  --darkGrey: #979797;
+}
+
+.post-image {
+  display: block;
+  width: 20em;
+  max-width: 100% !important;
+  margin: 2rem auto;
+}
+
+.post-video {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  height: 500px;
+  margin: 2rem auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .post-video {
+    display: flex;
+    justify-content: center;
+    width: 20em;
+    height: 100%;
+  }
+}
+
+// Accordion for posts
+
+.accordion__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion {
+  background-color: #e7e7e7;
+  color: #444444;
+  cursor: pointer;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  transition: background-color 0.6s ease;
+}
+
+.accordion:hover,
+.active {
+  background-color: #cccccc;
+}
+
+.accordion__title {
+  font-size: 1.2em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.accordion__icon {
+  // push chevron to right of page with margin-left
+  margin-left: auto;
+  transition: transform 0.6 ease;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.accordion__content {
+  background-color: #ffffff;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+  // max-height: 0;
+}
+
+.accordion__text {
+  font-weight: 400;
+  font-size: 14px;
+  padding: 1.1em;
+}

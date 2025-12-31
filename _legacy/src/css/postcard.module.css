@@ -4,10 +4,10 @@
   padding: 1rem;
   text-align: center;
   width: 100%;
-  max-width: 85vw;
+  max-width: 70em;
   margin: 15px auto;
   -webkit-box-shadow: 0 1px 6px rgba(57, 73, 76, 0.35);
-  box-shadow: 0 1px 6px rgba(57, 73, 76, 0.35);
+          box-shadow: 0 1px 6px rgba(57, 73, 76, 0.35);
 }
 
 .info {
@@ -15,8 +15,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 1rem 0;
 }
 
@@ -58,22 +58,19 @@
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 350px 1fr;
-    grid-template-columns: 350px 1fr;
+        grid-template-columns: 350px 1fr;
   }
-
   .info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 1.5rem;
   }
-
-  .image>div {
+  .image > div {
     height: 250px;
   }
 }
-
 /*# sourceMappingURL=postcard.module.css.map */

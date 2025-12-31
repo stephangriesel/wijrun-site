@@ -1,0 +1,67 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import Layout from "../components/layout";
+import styles from "../css/posttemplate.module.css";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const {
+	title,
+	description,
+	pubDate,
+	date,
+	updatedDate,
+	heroImage,
+	image,
+	author,
+} = Astro.props;
+const displayDate = pubDate || date;
+const displayImage = heroImage || image;
+
+// Format date for display: "D MMMM 'YY"
+// JS date formatting isn't identical to moment/gatsby format string but we can approximate or use a library.
+const options: Intl.DateTimeFormatOptions = {
+	day: "numeric",
+	month: "long",
+	year: "2-digit",
+};
+const formattedDate = displayDate
+	? new Date(displayDate)
+			.toLocaleDateString("en-GB", options)
+			.replace(/ /g, " ")
+			.replace(",", "") + "'"
+	: "";
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={`${title} by ${author}`} description={description} />
+	</head>
+	<body>
+		<Layout>
+			<section class={styles.template}>
+				<a href="/" class={styles.link}>Back</a>
+				<div class={styles.info}>
+					<h1>{title}</h1>
+					<h4>
+						<span>by {author}</span> / <span>{formattedDate}</span>
+					</h4>
+				</div>
+				{
+					displayImage && (
+						<Image
+							src={displayImage}
+							alt={title}
+							class={styles.img}
+						/>
+					)
+				}
+				<div class={styles.content}>
+					<slot />
+				</div>
+			</section>
+		</Layout>
+	</body>
+</html>

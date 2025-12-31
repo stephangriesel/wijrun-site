@@ -1,0 +1,55 @@
+.template {
+  -webkit-box-shadow: 0 1px 6px rgba(57, 73, 76, 0.35);
+          box-shadow: 0 1px 6px rgba(57, 73, 76, 0.35);
+  padding: 2em;
+  width: 100%;
+  max-width: 70em;
+  margin: 15px auto;
+}
+
+.template .link {
+  border: 1px var(--mainBlack) solid;
+  color: var(--mainBlack);
+  padding: 0.5em;
+  margin: 0.5em;
+  text-decoration: none;
+}
+
+.template .link:hover {
+  background: var(--mainBlack);
+  -webkit-transition: ease-in 0.8s;
+  transition: ease-in 0.8s;
+  color: var(--mainWhite);
+}
+
+.template .info {
+  margin: 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.template .info h4 {
+  font-size: 0.7em;
+  margin: 0.5em 0;
+}
+
+.template .content p {
+  margin: 1em 0;
+}
+
+.template .content h3 {
+  margin: 0.5em 0;
+}
+
+.template .img {
+  width: 100%;
+}
+/*# sourceMappingURL=posttemplate.module.css.map */

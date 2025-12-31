@@ -1,0 +1,40 @@
+.template {
+  box-shadow: 0 1px 6px rgba(57, 73, 76, 0.35);
+  padding: 2em;
+  width: 100%;
+  max-width: 70em;
+  margin: 15px auto;
+  .link {
+    border: 1px var(--mainBlack) solid;
+    color: var(--mainBlack);
+    padding: 0.5em;
+    margin: 0.5em;
+    text-decoration: none;
+    &:hover {
+      background: var(--mainBlack);
+      transition: ease-in 0.8s;
+      color: var(--mainWhite);
+    }
+  }
+  .info {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h4 {
+      font-size: 0.7em;
+      margin: 0.5em 0;
+    }
+  }
+  .content {
+    p {
+      margin: 1em 0;
+    }
+    h3 {
+      margin: 0.5em 0;
+    }
+  }
+  .img {
+    width: 100%;
+  }
+}
