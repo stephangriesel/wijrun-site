@@ -14,10 +14,17 @@ const PostCard = ({ post }) => {
         year: '2-digit'
     }).replace(/ /g, ' ').replace(',', '') + "'" : ''; // Attempt to match "D MMMM 'YY" format
 
+    // Prepare image attributes for React (rename fetchpriority to fetchPriority)
+    const imgProps = optimizedImage ? { ...optimizedImage.attributes } : {};
+    if (imgProps.fetchpriority) {
+        imgProps.fetchPriority = imgProps.fetchpriority;
+        delete imgProps.fetchpriority;
+    }
+
     return <article className={styles.card}>
         <div>
             {optimizedImage ? (
-                <img src={optimizedImage.src} {...optimizedImage.attributes} alt={title} loading="lazy" />
+                <img src={optimizedImage.src} {...imgProps} alt={title} loading="lazy" />
             ) : (
                 img && <img src={img.src} alt={title} loading="lazy" />
             )}
