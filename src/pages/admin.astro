@@ -13,6 +13,25 @@
         <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"
         ></script>
 
+        <!-- Custom Styling for Decap CMS Login Page -->
+        <style is:global>
+            /* Hide the default Decap Logo SVG */
+            [class*="DecapLogoIcon"] svg {
+                display: none;
+            }
+            /* Add custom logo as background */
+            [class*="DecapLogoIcon"] {
+                background-image: url("/logo.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                display: block;
+                width: 300px !important; /* Adjust width as needed */
+                height: 100px !important; /* Adjust height based on logo aspect ratio */
+                margin: 0 auto;
+            }
+        </style>
+
         <!-- Register the Accordion Editor Component -->
         <script is:inline>
             CMS.registerEditorComponent({
