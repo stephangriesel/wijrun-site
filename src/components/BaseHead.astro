@@ -31,9 +31,10 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta name="generator" content={Astro.generator} />
 
 <!-- Netlify Identity Widget -->
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-></script>
-<script>
+<script
+	is:inline
+	src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script is:inline>
 	if (window.netlifyIdentity) {
 		window.netlifyIdentity.on("init", (user) => {
 			if (!user) {
