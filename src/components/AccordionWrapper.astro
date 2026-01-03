@@ -1,0 +1,6 @@
+---
+import Accordion from "./Accordion.jsx";
+const props = Astro.props;
+---
+
+<Accordion client:only="react" {...props} />

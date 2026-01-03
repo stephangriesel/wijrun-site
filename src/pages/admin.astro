@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Content Manager</title>
+        <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        ></script>
+    </head>
+    <body>
+        <!-- Include the script that builds the page and powers Decap CMS -->
+        <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"
+        ></script>
+
+        <!-- Register the Accordion Editor Component -->
+        <script is:inline>
+            CMS.registerEditorComponent({
+                id: "accordion",
+                label: "Accordion",
+                fields: [
+                    { name: "title", label: "Title", widget: "string" },
+                    {
+                        name: "content",
+                        label: "Content (HTML/Code)",
+                        widget: "text",
+                    },
+                ],
+                pattern:
+                    /^<Accordion\s+title="(.*)"\s+content="([\s\S]*?)"\s*\/>/m,
+                fromBlock: function (match) {
+                    return {
+                        title: match[1],
+                        content: match[2],
+                    };
+                },
+                toBlock: function (obj) {
+                    return `<Accordion
+  title="${obj.title}"
+  content="${obj.content}"
+/>`;
+                },
+                toPreview: function (obj) {
+                    return `
+          <div style="border: 1px solid #ccc; margin: 10px 0;">
+            <div style="background: #eee; padding: 10px; font-weight: bold;">[Accordion: ${obj.title}]</div>
+            <div style="padding: 10px;">${obj.content}</div>
+          </div>
+        `;
+                },
+            });
+        </script>
+    </body>
+</html>

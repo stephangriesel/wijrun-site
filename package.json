@@ -4,9 +4,10 @@
   "version": "0.0.1",
   "packageManager": "pnpm@9.12.0",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "concurrently \"astro dev\" \"decap-server\"",
     "build": "astro build",
     "preview": "astro preview",
+    "cms-proxy": "decap-server",
     "astro": "astro"
   },
   "dependencies": {
@@ -20,5 +21,9 @@
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "sharp": "^0.34.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "decap-server": "^3.4.0"
   }
 }

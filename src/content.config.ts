@@ -17,6 +17,7 @@ const blog = defineCollection({
 			image: image().optional(),
 			author: z.string().optional(),
 			slug: z.string().optional(),
+			draft: z.boolean().optional().default(false),
 		}).transform(data => ({
 			...data,
 			pubDate: data.pubDate || data.date || new Date(),

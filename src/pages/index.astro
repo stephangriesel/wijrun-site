@@ -7,11 +7,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 import { getImage } from "astro:assets";
 
-const sortedPosts = (await getCollection("blog")).sort(
-	(a, b) =>
-		(b.data.pubDate || b.data.date).valueOf() -
-		(a.data.pubDate || a.data.date).valueOf(),
-);
+const sortedPosts = (await getCollection("blog"))
+	.filter((post) => !post.data.draft)
+	.sort(
+		(a, b) =>
+			(b.data.pubDate || b.data.date).valueOf() -
+			(a.data.pubDate || a.data.date).valueOf(),
+	);
 
 const posts = await Promise.all(
 	sortedPosts.map(async (post) => {
