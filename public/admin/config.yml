@@ -26,4 +26,5 @@ collections:
       - {label: "Hero Image", name: "image", widget: "image"}
       - {label: "Draft", name: "draft", widget: "boolean", default: false, required: false}
       - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "GPX File", name: "gpx_file", widget: "file", extensions: ["gpx"], required: false}
       - {label: "Body", name: "body", widget: "markdown"}
