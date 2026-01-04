@@ -4,7 +4,8 @@ slug: edinburgh
 date: 2026-01-02
 author: Stephan
 image: ./img/edinburgh.jpg
-draft: true
+draft: false
+gpx_file: img/activity_21347072680.gpx
 ---
 **Day 1:**
 
@@ -43,54 +44,56 @@ We have seen The Witchery on previous days from outside when we crossed it on th
 **Day 5**
 
 When we planned the whole trip we really wanted to include Holyrood Palace. Our flight back to Amsterdam is at 13:40 so that gives us some time in the morning to squeeze in Holyrood Palace but we gave it some thought and evaluated our stressful situation the day before and decided we would rather opt for slow morning, good breakfast and stress free arrival at airport. On arrival at airport our flight was delayed but thats ok, next time we come back to Edinburgh we still have something to see.
-<div className="post-video">
-  <iframe
-    width="100%"
-    height="auto"
-    src="https://www.youtube.com/embed/dd5Mear9BpQ"
-    frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
-</div>
 
 <Accordion
   title="Accommodation"
   content="
 
-<p>Hotel de Vrouwe van Stavoren</p>
+<p>The Roseate</p>
 <p>
-<strong>Cost: </strong>€166.10</br>
-<strong>Tourist Tax:</strong> €9.80</br>
-<strong>Bike hire:</strong> €15.00</br>
-<strong>Total: €190.90</strong>
+<strong>Cost: </strong>€668<br/>
+<p>We booked this through <a href='https://luxuryescapes.com/refer/INVITESTEPHANJ7M1P4?utm_campaign=default-referral-campaign&utm_source=luxuryescapes&utm_medium=referral&utm_content=referrer%3Af61697ed-0cbf-4e3a-8b29-2e84862bbf9e'>Luxury Escapes</a>. The extra benefits are great!</p>
 "
 />
 <Accordion
   title="Travel"
   content="
-<p>Snappcar</p>
+<p>KLM Flight</p>
 <p>
-<strong>Cost:</strong> €140.62</br>
-<strong>Fuel:</strong> €39.71</br>
-<strong>Total:€178.33</strong>
+<strong>Cost:</strong> €586<br/>
+<p>Last minute booking 😖</p>
 "
 />
 
-<Accordion
-  title="What we saw"
+<Accordion title="What we saw in Edinburgh"
   content="
 
   <ul>
-  <strong>Saturday:</strong>
-  <li>Stavoren & surrounds</li>
-  <li>Sneek</li>
-  </ul></br>
+  <strong>Day 1:</strong>
+  <li>Tourist Bar (Casserole & Steak Ale Pie)</li>
+  </ul><br/>
   <ul>
-  <strong>Sunday:</strong>
-  <li>Leeuwaarden</li>
-  <li>Oldenhove</li>
-  <li>Saint Boniface Church</li>
+  <strong>Day 2:</strong>
+  <li>Town Walk & The Castle</li>
+  <li>Lunch at Outsiders & Holyrood Gardens</li>
+  <li>Dinner at Fava</li>
+  </ul><br/>
+  <ul>
+  <strong>Day 3:</strong>
+  <li>Run to Cramond (14km)</li>
+  <li>River Leith Walk to Stockbridge</li>
+  <li>Dinner Patatino</li>
+  </ul><br/>
+  <ul>
+  <strong>Day 4:</strong>
+  <li>Arthur's Seat Hike</li>
+  <li>Mary's Close Tour</li>
+  <li>White Inn Pub</li>
+  <li>Dinner at The Witchery</li>
+  </ul><br/>
+  <ul>
+  <strong>Day 5:</strong>
+  <li>Relaxed Morning & Breakfast</li>
   </ul>
 "
 />
@@ -98,26 +101,37 @@ When we planned the whole trip we really wanted to include Holyrood Palace. Our 
 <Accordion
   title="Food"
   content="
-
-<p>Because of Covid-19 everything was still closed but we managed to get some pizzas the Saturday eve which was €. </p>
+  <ul>
+  <strong>Day 1:</strong>
+  <li>The Tourist Bar (Steak & Ale Pie)</li>
+  </ul></br>
+  <ul>
+  <strong>Day 2:</strong>
+  <li>Outsiders (Lunch)</li>
+  <li>Fava (Early Dinner)</li>
+  </ul></br>
+  <ul>
+  <strong>Day 3:</strong>
+  <li>Patatino</li>
+  </ul></br>
+  <ul>
+  <strong>Day 4:</strong>
+  <li>White Inn (Oldest Pub)</li>
+  <li>Aboosh (Takeaway)</li>
+  <li>The Witchery (Final Dinner)</li>
+  </ul>
 "
 />
 
 <Accordion
-  title="The Sunday Run"
+  title="The Run"
   content="
 
-  <p>Belinda's legs were way too tired from the cycling the previous day but I still managed to head out for 5km run along the same route we came cycling back from Sneek right next to the coast</p>
+  <p>Run to Cramond. It an easy route from Roseate as you just get on the Roseburn path and follow path all the way to Cramond, see GPX.</p>
 "
 />
 
-<div className="post-video">
-  <iframe
-    height="405"
-    width="590"
-    frameborder="0"
-    allowtransparency="true"
-    scrolling="yes"
-    src="https://www.strava.com/activities/3463694727/embed/a690db0e78e481cafeef06e9ed9481a3c4d9858c"
-  ></iframe>
-</div>
+import GpxMap from '../../../components/GpxMap.jsx';
+import gpxUrl from './activity_21347072680.gpx?url';
+
+<GpxMap src={gpxUrl} client:only="react" />
